@@ -36,6 +36,11 @@ public class EndpointMapImpl extends EndpointMap {
         {
             rawPath = rawPath.substring(1);
         }
+        //lets validate the request urls
+        String regex = "^api/";
+        Pattern p = Pattern.compile(regex);
+        Matcher ma = p.matcher(rawPath);
+        System.out.println(ma.matches());
 
         return null;
     }
